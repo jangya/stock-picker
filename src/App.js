@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Home from './components/home';
 
+const title = "Stock Picker";
+
+const Copyright = () => (
+  <footer class="text-center text-gray-700">
+    {`Copyright © ${title} ${new Date().getFullYear()}.`}
+  </footer>
+);
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      {/* <h1 className="text-3xl text-gray-700 text-center">{title}</h1> */}
+      <div className="h-screen mx-10">
+        <Home title={title}/>
+      </div>
+      <Copyright />
+    </React.Fragment>
   );
 }
 
